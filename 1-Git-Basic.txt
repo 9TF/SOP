@@ -1,0 +1,92 @@
+Git Environment setup with VS-Code.
+===================================
+
+1. Download and install Gitbash for your machine from --> https://git-scm.com/downloads
+
+2. Download and install VS-Code for your machine from --> https://code.visualstudio.com/download
+
+3. Add below line in settings.json file to add git bash in VS-Code.
+"terminal.integrated.profiles.windows":{"Git Bash":{"path":"C:\\Program Files\\Git\\bin\\bash.exe"}, },
+"terminal.integrated.defaultProfile.windows": "Git Bash"
+
+4. In terminal choose bash terminal.
+
+5. Generate ssh keys by using command  ssh-keygen.exe and enter passphrase to secure your keys. 
+
+Below is SSH keys generate output.
+==================================
+$ ssh-keygen.exe 
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/user1/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /c/Users/user1/.ssh/id_rsa
+Your public key has been saved in /c/Users/user1/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:sBFjnRPPhEzOiklH6iqB8UjmCCuwtAlUa9cxCjeA9SY user1@user
+The key's randomart image is:
++---[RSA 3072]----+
+| .+=.o=*o+.      |
+|..  =++=O+       |
+|=+ Eo=+.o.o      |
+|@*+o++ =         |
+|O+. + o S        |
+|.. .             |
+|. .              |
+| .               |
+|                 |
++----[SHA256]-----+
+
+6. Copy public key from /c/Users/user1/.ssh/id_rsa.pub and add it to your github_account >> seting >> SSH and GPG keys and save.
+
+7. Run below command to add email address & name, for commint and push  reference.
+
+#git config --global user.email "sbsachinbhandari@gmail.com"
+#git config --global user.name "9tf"
+
+
+
+
+
+
+
+Clone your Remote/Github repo
+==============================
+1. open VS-Code and open integrated terminal
+
+2. #git clone git@github.com:git_username/test.git (In VS-Code bash terminal enter command )
+
+3. #git status (To check your repo status)
+
+4. #git add . (dot . will add any untracked or new firle to your git repo)
+
+5. #git commit -m "2nd commit" -m "Testing 2nd commit in life
+
+6. #git push origion main/master (To updates all changes to your main/master branch)
+
+7. #git status (Again to verify repo status)
+
+8. #git push (This will push all chnages to your remote repo like Github.)
+
+Create new git local repo and push it to new remote repo.
+====================================================================
+
+1. #mkdir SOP (create new local repo folder )
+
+2. #cd SOP
+
+3. #git init  (To Initialized empty git repo)
+    output :- Initialized empty Git repository in C:/Users/riyab/OneDrive/Documents/Git/SOP/.git/
+
+4. Create README.md file and enter some text on this file.
+
+5. #git status (to check status)
+
+6. #git add . (To add all untracked file)
+
+7. #git commit origin main/master
+
+8.
+
+6.
+1. Creat an empty repo on github with name SOP.
